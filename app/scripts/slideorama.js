@@ -35,7 +35,6 @@
 
       this.$slider = $(slider);
       this.$slides = this.$slider.find(options.slides) || this.$slider.find(".slider__slide");
-      // this.slideWidth = options.slideWidth || this.$slides.outerWidth();
       this.slideWidth = options.slideWidth;
       this.slidesToShow = options.slidesToShow;
       this.totalSlides = this.$slides.length || 0;
