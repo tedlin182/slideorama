@@ -1,0 +1,158 @@
+/**
+  Slide-O-Rama SCSS
+**/
+
+@import "normalize";
+@import "helpers/functions/fonts";
+@import "helpers/variables/colors";
+@import "helpers/variables/fonts";
+@import "helpers/variables/media_queries";
+
+/* General Styling
+-----------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+body, * {
+  box-sizing: inherit;
+}
+
+html, body {
+  background: white;
+  font-size: $mobile-font-size;
+  font-family: $base-font-family;
+  color: $base-font-color;
+  height: 100%;
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-stroke: 0.05px;
+  width: 100%;
+
+  @media #{$desktop-media} {
+    font-size: $non-mobile-font-size;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $header-color;
+  font-weight: normal;
+  text-stroke: 0;
+}
+
+h1 {
+  @media #{$desktop-media} {
+    font-size: rem(36px);
+    line-height: 1.25em;
+  }
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $link-default;
+  letter-spacing: 0.5px;
+  text-stroke: 0;
+  transition: color 150ms;
+
+  &:link, &:visited {
+    text-decoration: none;
+  }
+
+  &:hover, &:active {
+    color: $link-hover-active-focus;
+  }
+}
+
+p {
+  line-height: 2em;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type="text"]:focus, input[type="password"]:focus,
+input[type="datetime"]:focus, input[type="datetime-local"]:focus,
+input[type="date"]:focus, input[type="month"]:focus,
+input[type="time"]:focus, input[type="week"]:focus,
+input[type="number"]:focus, input[type="email"]:focus,
+input[type="url"]:focus, input[type="search"]:focus,
+input[type="tel"]:focus, input[type="color"]:focus,
+select:focus, textarea {
+  @media only screen and (max-width: 640px) {
+    font-size: $non-mobile-font-size;
+  }
+}
+
+/* Global Styling
+-----------------------------------------*/
+// Site containers
+.site__main,
+.site__header {
+  @media #{$desktop-media} {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// General Page styling
+.page__heading {
+  margin-top: 0;
+}
+
+/* Slider Example - Specific Styling
+-----------------------------------------*/
+.slider__slide {
+  border: 1px solid #ccc;
+  height: 250px;
+  padding: 1rem;
+}
+
+.slider__slide_image {
+  max-width: 250px;
+  max-height: 200px;
+}
+
+.slider__slide_caption {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}

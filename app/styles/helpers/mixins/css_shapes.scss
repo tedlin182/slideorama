@@ -1,0 +1,60 @@
+/*
+    CSS Shapes Mixins
+*/
+
+@mixin triangle_base($size: 10px) {
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 0;
+  z-index: 1000;
+}
+
+@mixin down_triangle($size: 10px, $color: #000, $position-right: 10px, $position-top: 45%) {
+  position: relative;
+
+  &:after {
+    @include triangle_base($size: $size);
+
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    top: $position-top;
+    right: $position-right;
+    transition: all 350ms linear;
+  }
+}
+
+@mixin up_triangle($size: 10px, $color: #000, $position-right: 10px, $position-top: 45%) {
+  position: relative;
+
+  &:after {
+    @include triangle_base($size: $size);
+
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    top: $position-top;
+    right: $position-right;
+    transition: all 350ms linear;
+  }
+}
+
+@mixin left_triangle($size: 10px, $color: #000) {
+  @include triangle_base($size: $size);
+
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent;
+  border-right: $size solid $color;
+  transition: all 350ms linear;
+}
+
+
+@mixin right_triangle($size: 10px, $color: #000) {
+  @include triangle_base($size: $size);
+
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent;
+  border-left: $size solid $color;
+  transition: all 350ms linear;
+}

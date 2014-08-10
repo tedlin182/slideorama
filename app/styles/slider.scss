@@ -1,0 +1,113 @@
+/*
+    Teespring Slider Partial
+    created by - TLin
+*/
+
+@import "helpers/functions/fonts";
+@import "helpers/variables/media_queries";
+@import "helpers/variables/fonts";
+@import "helpers/placeholders/placeholders";
+@import "helpers/mixins/css_shapes";
+
+%larger_arrow {
+  border-bottom-width: 30px;
+  border-top-width: 30px;
+  width: 30px;
+}
+
+/* General CTA Buttons
+-----------------------------------------*/
+.slider__wrapper {
+  margin: 1.5rem 0;
+  position: relative;
+
+  @media #{$desktop-media} {
+    margin: 1.5rem rem(-40px, $non-mobile-font-size);
+    padding: 0 rem(40px, $non-mobile-font-size);
+  }
+}
+
+.slider__inner_wrapper {
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  opacity: 1;
+  transition: opacity 1s linear;
+  overflow: hidden;
+}
+
+.slider--inactive {
+  opacity: 0;
+}
+
+.slider__toggle {
+  @extend %vertical_align;
+
+  display: none;
+  opacity: 0.3;
+  position: absolute;
+  transition: opacity 0.3s linear;
+  z-index: 100;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  @media #{$desktop-media} {
+    display: block;
+  }
+}
+
+.slider__toggle--inactive {
+  display: none;
+  z-index: -1;
+}
+
+.slider__next_toggle {
+  @include right_triangle($size: 30px);
+
+  right: 0;
+}
+
+.slider__prev_toggle {
+  @include left_triangle($size: 30px);
+
+  left: 0;
+}
+
+.slider__slide {
+  float: left;
+}
+
+/* Pager
+-----------------------------------------*/
+.slider__pager {
+  margin: 1rem 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slider__page {
+  @extend %hide_text;
+
+  background: #000;
+  border-radius: 5px;
+  display: inline-block;
+  opacity: 0.5;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+
+.slider__page--current {
+  opacity: 1;
+}

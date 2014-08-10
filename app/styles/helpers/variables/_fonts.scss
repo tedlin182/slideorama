@@ -1,0 +1,45 @@
+/**
+    Font Variables
+**/
+
+@import "colors";
+
+/* Fonts */
+// The base font size.
+$mobile-font-size: 14px !default;
+$non-mobile-font-size: 16px !default;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-color: #333 !default;
+
+// Link state colors
+$link-default: $light-gray;
+$link-hover-active-focus: $blue;
+$link-visited: $gray;
+
+// Thumbnail Image
+$thumbnail-border-default: $light-gray;
+$thumbnail-border-active: $dark-gray;
+
+// Inputs
+$dropdown-menu-background: $off-white;
+// Text
+$base-font-color: $gray !default;
+$call-to-action-text: $neon-green;
+$label-text: $black;
+
+// Social Link Colors
+$twitter-blue: #50abf1;
+$facebook-blue: #39579a;
+$pinterest-red: #c8232c;
+
+/* Header Styling */
+$header-color: $off-black !default;
+$dropdown-border: $extralight-gray;
+$dropdown-toggle-hover: $blue-med;
+
+// Form Element Styling
+$textfield-border: $extralight-gray;
+$textfield-text: $meddark-gray;
+$label-text: $meddark-gray;

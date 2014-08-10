@@ -1,0 +1,22 @@
+/**
+    Global Placeholders
+**/
+
+// Image Replacement/Hide Text
+// Replacement for -9999px technique for better performance and bugs with -9999px technique
+%hide_text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+%display_inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+%vertical_align {
+  top: 50%;
+  transform: translateY(-50%);
+}
+

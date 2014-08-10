@@ -1,0 +1,41 @@
+ /*
+    Media/Responsive Breakpoint Variables
+*/
+
+/* Media Breakpoints */
+$mobile-default: 320px !default;
+$mobile-landscape: 640px !default;
+$tablet-default: 768px !default;
+$tablet-landscape: 1024px !default;
+$desktop-default: 960px !default;
+
+// Breakpoints
+$mobile-portrait-breakpoint: "(max-width: 320px)";
+$mobile-landscape-breakpoint: "(min-width: 321px) and (orientation: landscape)";
+$tablet-portrait-breakpoint: "(min-width: 660px) and (max-width: 979px)";
+$non-desktop-breakpoint: "(max-width: 979px)";
+
+// Media Queries
+$mobile-media: "only screen and (max-width: 320px)";
+$mobile-landscape-media: "only screen and (min-width: 321px) and (orientation: landscape)";
+$tablet-media: "only screen and (min-width: 660px) and (max-width: 979px)";
+$tablet-portrait-media: "only screen and (min-width: 660px) and (max-width: 822px)";
+$tablet-landscape-media: "only screen and (min-width: 823px) and (max-width: 979px)";
+$non-mobile-media: "only screen and (min-width: 660px)";
+$non-mobile-site-nav: "only screen and (min-width: 768px)";
+$desktop-media: "only screen and (min-width: 980px)";
+
+// Vertical Breakpoints
+$mobile-portrait-vertical-media: "only screen and (min-height: 480px)";
+$tablet-vertical-media: "only screen and (min-height: 600px)";
+$non-mobile-vertical-media: "only screen and (min-height: 724px)";
+$desktop-vertical-media: "only screen and (min-height: 900px)";
+
+// Retina Display
+$retina-display: "(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi)";
+
+// Breakpoints
+$mobile: new-breakpoint(min-width $mobile-landscape max-width $tablet-default - 1 4);
+$tablet: new-breakpoint(min-width $tablet-default max-width $tablet-landscape 8);
+$desktop: new-breakpoint(min-width $tablet-landscape + 1 12);

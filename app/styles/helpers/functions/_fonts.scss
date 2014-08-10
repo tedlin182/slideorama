@@ -1,0 +1,15 @@
+/*
+    Font Mixins
+*/
+
+// REM font calculation. Base font size determined by media query
+@function rem ($desired-font-size, $base-font-size: 14px) {
+  $remSize: $desired-font-size / $base-font-size;
+
+  @return #{$remSize}rem;
+}
+
+// Use golden-ratio to scale font sizes and spacing
+@function font_scale ($scale: 1) {
+  @return #{golden-ratio($base-font-size, $scale)}rem;
+}
